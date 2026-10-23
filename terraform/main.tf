@@ -35,7 +35,7 @@ resource "aws_instance" "example_server" {
 
 resource "aws_ebs_volume" "example" {
   for_each = toset(var.tags)
-  availability_zone = aws_instance.example_server.availability_zone # Dynamic reference matching instance AZ
+  availability_zone = aws_instance.example_server[each.key].availability_zone # Dynamic reference matching instance AZ
   size              = 11
   type              = "gp3"
 
