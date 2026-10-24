@@ -5,13 +5,6 @@ terraform {
       version = "~> 6.53"
     }
   }
-backend "s3" {
-    bucket         = "mjay-s3-bucket"
-    key            = "environment/dev/terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    use_lockfile   = true  # Enables S3 native locking (Terraform 1.10+)
-  }
 }
 
 # The default, un-aliased provider configuration
