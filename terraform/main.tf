@@ -4,6 +4,6 @@ provider "aws" {
 
 
 module "ec2_provisioning" {
-source = ./modules/ec2_instance
+source = "./modules/ec2_instance"
 tags = ["jenkins-master","jenkins-agent"]
 }
