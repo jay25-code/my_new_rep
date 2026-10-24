@@ -1,5 +1,5 @@
 output "private-ips" {
-value = [for instance in aws_instance.exaample_server : instance.private_ip]
+value = [for instance in aws_instance.example_server : instance.private_ip]
 }
 
 output "volume-id" {
